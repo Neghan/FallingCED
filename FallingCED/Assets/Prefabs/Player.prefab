@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54515828760103124}
   - component: {fileID: 114666676374487366}
   - component: {fileID: 114104626782055776}
+  - component: {fileID: 114789393801951800}
   m_Layer: 0
   m_Name: Player
   m_TagString: pelota
@@ -89,7 +90,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9e97c1691d55de64ebbe525ad79eef02, type: 2}
+  - {fileID: 2100000, guid: 58139ed03d6f50b4490e054e58de4a7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,8 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4891651b88221e84699b0e9a09cee607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScrollX: 0.02
-  ScrollY: 0.2
+  ScrollX: 0.1
+  ScrollY: 0
 --- !u!114 &114666676374487366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,7 +155,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56563f6650797974dae60c8f30ddd871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
+--- !u!114 &114789393801951800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1182367615943564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e56ae8b8f0f31f4ab1239d0f2ba024f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1152202338485682, guid: ce76489df1764074f8e46239ba96baae, type: 2}
 --- !u!135 &135481015503569866
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -233,7 +246,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.45
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -827,7 +840,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 60
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1131,7 +1144,7 @@ ParticleSystem:
         key0: {r: 0.6782456, g: 0, b: 0.78676474, a: 1}
         key1: {r: 0.85294116, g: 0.006271632, b: 0.7244808, a: 1}
         key2: {r: 0.9632353, g: 0.43203938, b: 0.88263994, a: 0}
-        key3: {r: 1, g: 1, b: 1, a: 0}
+        key3: {r: 1, g: 0.81477076, b: 1, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
