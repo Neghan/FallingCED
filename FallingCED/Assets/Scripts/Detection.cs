@@ -43,6 +43,8 @@ public class Detection : MonoBehaviour {
 				mylife--;
 				canEnter = false;
 			}
+			//JUST FOR MENU
+			canEnter = false;
 			wichcolor = Random.Range (1, 4);
 			//RED
 			if (wichcolor == 1) {

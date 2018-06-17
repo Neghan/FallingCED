@@ -34,14 +34,16 @@ public class Generator : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (GetComponent<Movement> ().fallen == true && !unavez) {
-			linesx++;
-			generateLine (primero, primero.Length, linesx);
+		if (swit) {
+			if (GetComponent<Movement> ().fallen == true && !unavez) {
+				linesx++;
+				generateLine (primero, primero.Length, linesx);
 
-			unavez = true;
-		}
-		if (GetComponent<Movement> ().fallen == false){
-			unavez = false;
+				unavez = true;
+			}
+			if (GetComponent<Movement> ().fallen == false) {
+				unavez = false;
+			}
 		}
 	}
 }

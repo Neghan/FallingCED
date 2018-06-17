@@ -105,8 +105,10 @@
      <Compile Include="Assets\Scripts\ScrollBackground.cs" />
      <Compile Include="Assets\Scripts\Up.cs" />
      <Compile Include="Assets\Scripts\ValueSet.cs" />
+     <Compile Include="Assets\Scripts\WallBounce.cs" />
      <Compile Include="Assets\UI\AnimationUI.cs" />
      <Compile Include="Assets\UI\HP.cs" />
+     <Compile Include="Assets\UI\Menu.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />

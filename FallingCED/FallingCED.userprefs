@@ -1,10 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Generator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UI\Menu.cs">
     <Files>
-      <File FileName="Assets\Scripts\Detection.cs" Line="110" Column="4" />
-      <File FileName="Assets\Scripts\Generator.cs" Line="38" Column="13" />
-      <File FileName="Assets\Scripts\Killer.cs" Line="11" Column="29" />
+      <File FileName="Assets\Scripts\WallBounce.cs" Line="7" Column="37" />
+      <File FileName="Assets\Scripts\Detection.cs" Line="46" Column="19" />
+      <File FileName="Assets\Scripts\Movement.cs" Line="56" Column="5" />
+      <File FileName="Assets\Scripts\ValueSet.cs" Line="15" Column="15" />
+      <File FileName="Assets\UI\Menu.cs" Line="8" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
