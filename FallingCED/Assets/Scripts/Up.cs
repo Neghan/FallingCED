@@ -10,6 +10,7 @@ public class Up : MonoBehaviour {
 
 	public AudioClip fail;
 	AudioSource sound;
+	float pos;
 
 	void OnTriggerEnter(Collider ball){
 		if(ball.tag == "pelota"){
@@ -21,16 +22,19 @@ public class Up : MonoBehaviour {
 	void Start () {
 		HP = GameObject.FindGameObjectWithTag ("UI");
 		sound = GetComponent<AudioSource> ();
+		pos = transform.position.y;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (start == true) {
+			GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen = true;
 			transform.parent.position = new Vector3 (GetComponentInParent<Transform> ().position.x, GetComponentInParent<Transform> ().position.y + Time.deltaTime * speed, GetComponentInParent<Transform> ().position.z);
-			if (transform.parent.position.y >= 10.0f) {
+			if (transform.parent.position.y >= pos+10.0f) {
 				HP.GetComponent<HP>().health-=GetComponentInParent<Detection> ().mylife;
 				sound.PlayOneShot (fail);
-				Destroy (this.gameObject);
+				GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen = false;
+				Destroy (transform.parent.gameObject);
 			}
 		}	
 	}

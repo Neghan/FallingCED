@@ -24,10 +24,24 @@ public class Detection : MonoBehaviour {
 	public GameObject bluelight;
 	public GameObject greenlight;
 
+	bool canEnter=true;
+
+	float wich;
+	public float movespeed = 2.0f;
+	public float amount = 1.0f;
+	Vector3 startpos;
+
+	void Type(){
+		wich = Random.Range (0, 2);
+	}
+
+
+
 	void OnTriggerEnter(Collider ball){
-		if(ball.gameObject.CompareTag("pelota")){
+		if(ball.gameObject.CompareTag("pelota")&&canEnter){
 			if (!menu) {
 				mylife--;
+				canEnter = false;
 			}
 			wichcolor = Random.Range (1, 4);
 			//RED
@@ -59,10 +73,11 @@ public class Detection : MonoBehaviour {
 		}
 	}
 	void OnTriggerExit(Collider ball){
-		if (ball.gameObject.CompareTag ("pelota")) {
+		if (ball.gameObject.CompareTag ("pelota")&&!canEnter) {
 			redlight.GetComponent<MeshRenderer> ().enabled = false;
 			greenlight.GetComponent<MeshRenderer> ().enabled = false;
 			bluelight.GetComponent<MeshRenderer> ().enabled = false;
+			canEnter = true;
 		}
 	}
 
@@ -80,10 +95,22 @@ public class Detection : MonoBehaviour {
 	void Start () {
 		mylife = Random.Range (1, 10);
 		sound = GetComponent<AudioSource> ();
+		Type ();
+		startpos = transform.position;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		//TYPE
+		if (wich == 0) {
+			/*Vector3 actual = startpos;
+			actual.z += amount*Mathf.Sin (Time.deltaTime*movespeed);
+			transform.position = actual;*/
+		} else if (wich == 1) {
+
+		} else if (wich == 2) {
+			
+		}
 
 		if (mylife <= 0 && !imDead) {
 			imDead = true;

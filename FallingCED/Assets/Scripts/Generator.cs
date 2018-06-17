@@ -9,6 +9,9 @@ public class Generator : MonoBehaviour {
 	public GameObject prefab;
 	static Vector3 initPos = new Vector3(-3.0f,3.0f,-1.5f);
 
+	int linesx;
+	bool unavez;
+
 
 	void generateLine(GameObject [] lineaParaLlenar,int length,int numeroLinea){
 		Vector3 pos = new Vector3 (initPos.x, initPos.y - 5 * numeroLinea, initPos.z);
@@ -21,14 +24,24 @@ public class Generator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (swit) {
-			generateLine (primero, primero.Length, 0);
-			generateLine (primero, primero.Length, 1);
+			linesx = 0;
+			generateLine (primero, primero.Length, linesx);
+			linesx++;
+			generateLine (primero, primero.Length, linesx);
 		}
 	}
 
 
 	// Update is called once per frame
 	void Update () {
+		if (GetComponent<Movement> ().fallen == true && !unavez) {
+			linesx++;
+			generateLine (primero, primero.Length, linesx);
 
+			unavez = true;
+		}
+		if (GetComponent<Movement> ().fallen == false){
+			unavez = false;
+		}
 	}
 }
