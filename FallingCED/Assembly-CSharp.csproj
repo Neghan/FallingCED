@@ -117,6 +117,7 @@
      <Compile Include="Assets\UI\AnimationUI.cs" />
      <Compile Include="Assets\UI\HP.cs" />
      <Compile Include="Assets\UI\Menu.cs" />
+     <Compile Include="Assets\UI\SettingsInGame.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />

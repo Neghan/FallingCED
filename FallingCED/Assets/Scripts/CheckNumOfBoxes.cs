@@ -14,7 +14,7 @@ public class CheckNumOfBoxes : MonoBehaviour {
 	void Update () {
 		//Debug.Log (GameObject.FindGameObjectsWithTag ("cubos").Length);
 		if (GameObject.FindGameObjectsWithTag ("cubos").Length <= 4) {
-			cam.GetComponent<CameraLookAt> ().onetime = false;
+			
 			ball.GetComponent<Movement> ().fallen = true;
 		}
 	}

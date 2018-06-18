@@ -18,6 +18,11 @@ public class Up : MonoBehaviour {
 			start = true;
 		}
 	}
+	void OnTriggerExit(Collider ball){
+		if(ball.tag == "pelota"){
+			GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen = false;
+		}
+	}
 	// Use this for initialization
 	void Start () {
 		HP = GameObject.FindGameObjectWithTag ("UI");
@@ -29,11 +34,14 @@ public class Up : MonoBehaviour {
 	void Update () {
 		if (start == true) {
 			GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen = true;
+
+
 			transform.parent.position = new Vector3 (GetComponentInParent<Transform> ().position.x, GetComponentInParent<Transform> ().position.y + Time.deltaTime * speed, GetComponentInParent<Transform> ().position.z);
-			if (transform.parent.position.y >= pos+5.0f) {
+
+			if (transform.parent.position.y >= pos+10.0f) {
 				HP.GetComponent<HP>().health-=GetComponentInParent<Detection> ().mylife;
 				sound.PlayOneShot (fail);
-				GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen = false;
+
 				Destroy (transform.parent.gameObject);
 			}
 		}	
