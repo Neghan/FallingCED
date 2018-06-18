@@ -792,6 +792,8 @@ MonoBehaviour:
   redlight: {fileID: 1249150922573988}
   bluelight: {fileID: 1101207431723058}
   greenlight: {fileID: 1987026785902946}
+  movespeed: 2
+  amount: 1
 --- !u!114 &114333802442029350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -841,6 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cubo: {fileID: 1152202338485682}
+  menu: 0
 --- !u!114 &114698259050325876
 MonoBehaviour:
   m_ObjectHideFlags: 1

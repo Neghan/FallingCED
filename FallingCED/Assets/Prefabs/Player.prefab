@@ -157,6 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  menu: 0
+  fallen: 0
 --- !u!114 &114789393801951800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swit: 1
   prefab: {fileID: 1152202338485682, guid: ce76489df1764074f8e46239ba96baae, type: 2}
+  Dancing: {fileID: 1459197488734828, guid: dabdf870a8e1eee4f89818a6d7d3859c, type: 2}
 --- !u!135 &135481015503569866
 SphereCollider:
   m_ObjectHideFlags: 1

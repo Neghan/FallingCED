@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraLookAt : MonoBehaviour {
 	float nextYCam;
-	bool onetime;
+	public bool onetime;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,11 +21,12 @@ public class CameraLookAt : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
 		if (GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen == false&&onetime) {
 			onetime = false;
 		}
 		//transform.LookAt (GameObject.FindGameObjectWithTag ("pelota").transform);
-		if (GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen&&!onetime) {
+		if (GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen && !onetime && GameObject.FindGameObjectsWithTag ("cubos").Length > 4){
 			nextYCam = transform.position.y - 5;
 			StartCoroutine(LerpFromTo(transform.position,new Vector3 (0, nextYCam, -8),1.5f));
 			onetime = true;

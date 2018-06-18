@@ -51,6 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_MK\MKXRayFree\Demo\Code\AutoEnableObjects.cs" />
+     <Compile Include="Assets\_MK\MKXRayFree\Demo\Code\InfoTextDisable.cs" />
+     <Compile Include="Assets\_MK\MKXRayFree\Demo\Code\MKXRayCopyPropertiesRuntime.cs" />
+     <Compile Include="Assets\_MK\MKXRayFree\Demo\Code\MKXRayDemoControl.cs" />
+     <Compile Include="Assets\_MK\MKXRayFree\Demo\Code\MKXRayDemoMouseOrbitImproved.cs" />
+     <Compile Include="Assets\_MK\MKXRayFree\MKXRayFreeMaterialHelper.cs" />
+     <Compile Include="Assets\DancingManikies\Dance.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -97,6 +104,7 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
      <Compile Include="Assets\Scripts\CameraLookAt.cs" />
+     <Compile Include="Assets\Scripts\CheckNumOfBoxes.cs" />
      <Compile Include="Assets\Scripts\Detection.cs" />
      <Compile Include="Assets\Scripts\Generator.cs" />
      <Compile Include="Assets\Scripts\Killer.cs" />
@@ -149,6 +157,7 @@
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
+     <None Include="Assets\_MK\MKXRayFree\Shader\MKXRayFree.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
  <Reference Include="UnityEngine.UI">

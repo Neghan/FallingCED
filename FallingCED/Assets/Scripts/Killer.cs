@@ -5,8 +5,9 @@ using UnityEngine;
 public class Killer : MonoBehaviour {
 	public float decrease;
 	void OnTriggerEnter(Collider cubes){
-		if(cubes.tag=="cubos"){
-			Debug.Log ("well");
+		Debug.Log ("well");
+		if(cubes.tag=="Danceman"){
+			
 			decrease = cubes.gameObject.GetComponent<Detection> ().mylife;
 			Destroy (cubes.gameObject);
 			decrease = 0;
@@ -19,6 +20,6 @@ public class Killer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 }

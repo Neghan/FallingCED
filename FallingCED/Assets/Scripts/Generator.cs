@@ -7,6 +7,7 @@ public class Generator : MonoBehaviour {
 	GameObject []primero = new GameObject[4];  
 	//GameObject []segundo = new GameObject[4];  
 	public GameObject prefab;
+	public GameObject Dancing;
 	static Vector3 initPos = new Vector3(-3.0f,3.0f,-1.5f);
 
 	int linesx;
@@ -19,6 +20,10 @@ public class Generator : MonoBehaviour {
 			lineaParaLlenar [i] = Instantiate (prefab,pos,Quaternion.identity);
 			pos = new Vector3 (pos.x + 2,pos.y,pos.z);
 		}
+		Vector3 pos1 = new Vector3 (initPos.x - 3,0.6f+initPos.y -5* numeroLinea, initPos.z);
+		Vector3 pos2 = new Vector3 (initPos.x + 9,0.6f+initPos.y -5* numeroLinea, initPos.z);
+		Instantiate (Dancing,pos1 , Quaternion.Euler(0,180,0));
+		Instantiate (Dancing,pos2 , Quaternion.Euler(0,180,0));
 	}
 
 	// Use this for initialization

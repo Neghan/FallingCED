@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UI\Menu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\DancingManikies\Dance.cs">
     <Files>
-      <File FileName="Assets\Scripts\WallBounce.cs" Line="7" Column="37" />
-      <File FileName="Assets\Scripts\Detection.cs" Line="46" Column="19" />
-      <File FileName="Assets\Scripts\Movement.cs" Line="56" Column="5" />
-      <File FileName="Assets\Scripts\ValueSet.cs" Line="15" Column="15" />
-      <File FileName="Assets\UI\Menu.cs" Line="8" Column="19" />
+      <File FileName="Assets\Scripts\Movement.cs" Line="11" Column="20" />
+      <File FileName="Assets\Scripts\Up.cs" Line="33" Column="47" />
+      <File FileName="Assets\Scripts\CameraLookAt.cs" Line="29" Column="153" />
+      <File FileName="Assets\Scripts\CheckNumOfBoxes.cs" Line="15" Column="5" />
+      <File FileName="Assets\Scripts\Generator.cs" Line="24" Column="44" />
+      <File FileName="Assets\DancingManikies\Dance.cs" Line="23" Column="57" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

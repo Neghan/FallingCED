@@ -30,7 +30,7 @@ public class Up : MonoBehaviour {
 		if (start == true) {
 			GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen = true;
 			transform.parent.position = new Vector3 (GetComponentInParent<Transform> ().position.x, GetComponentInParent<Transform> ().position.y + Time.deltaTime * speed, GetComponentInParent<Transform> ().position.z);
-			if (transform.parent.position.y >= pos+10.0f) {
+			if (transform.parent.position.y >= pos+5.0f) {
 				HP.GetComponent<HP>().health-=GetComponentInParent<Detection> ().mylife;
 				sound.PlayOneShot (fail);
 				GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen = false;
