@@ -13,9 +13,12 @@ public class HP : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Text>().text = ""+health;
+		
 		if (health <= 0) {
+			GetComponent<Text> ().text = "" + 0;
 			Destroy (player.gameObject);
+		} else {
+			GetComponent<Text>().text = ""+health;
 		}
 	}
 }

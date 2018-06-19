@@ -12,9 +12,8 @@ public class CheckNumOfBoxes : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Debug.Log (GameObject.FindGameObjectsWithTag ("cubos").Length);
+		//Debug.Log (ball.GetComponent<Movement> ().fallen);
 		if (GameObject.FindGameObjectsWithTag ("cubos").Length <= 4) {
-			
 			ball.GetComponent<Movement> ().fallen = true;
 		}
 	}

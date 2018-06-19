@@ -158,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   menu: 0
+  points: 0
   fallen: 0
 --- !u!114 &114789393801951800
 MonoBehaviour:

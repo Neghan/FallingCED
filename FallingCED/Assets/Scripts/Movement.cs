@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour {
 	bool once=true;
 	bool onetime;
 	public bool menu;
+	public int points;
 	public bool fallen;
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class Movement : MonoBehaviour {
 			//FORCE
 			GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 0,0);
 			GetComponent<Rigidbody>().AddForce(new Vector3(0,400,0));
+			points++;
 			once = false;
 		}
 	}

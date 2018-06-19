@@ -28,7 +28,7 @@ public class CameraLookAt : MonoBehaviour {
 		//transform.LookAt (GameObject.FindGameObjectWithTag ("pelota").transform);
 		if (GameObject.FindGameObjectWithTag ("pelota").GetComponent<Movement> ().fallen && !onetime ){
 			nextYCam = transform.position.y - 5;
-			StartCoroutine(LerpFromTo(transform.position,new Vector3 (0, nextYCam, -8),1.5f));
+			StartCoroutine(LerpFromTo(transform.position,new Vector3 (0, nextYCam, -16),1.0f));
 			onetime = true;
 			//transform.position = new Vector3 (0, GameObject.FindGameObjectWithTag ("pelota").transform.position.y + 2, -8);
 		}
