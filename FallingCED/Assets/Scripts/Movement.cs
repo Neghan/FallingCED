@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour {
 	public bool menu;
 	public int points;
 	public bool fallen;
+	private Vector2 touchOrigin = -Vector2.one;
 	// Use this for initialization
 	void Start () {
 		if (!menu) {
@@ -35,7 +36,28 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!menu){
+			//IPHONE 
+			if (Input.touchCount > 0) {
+				Touch myTouch = Input.touches [0];
+				if (myTouch.phase == TouchPhase.Began) {
+					touchOrigin = myTouch.position;
+				} else if (myTouch.phase == TouchPhase.Ended && touchOrigin.x >= 0) {
+					Vector2 touchEnd = myTouch.position;
+					float x = touchEnd.x - touchOrigin.x;
+					touchOrigin.x = -1;
+					if (x > 0) {
+						status = 1;
+						onetime = true;
+					} else if (x < 0) {
+						status = 2;
+						onetime = true;
+					}
+				}
+			}
+			//PC
 			if (Input.GetKeyDown ("d")) {
+				
+
 				status = 1;
 				onetime = true;
 			} else if (Input.GetKeyDown ("a")) {
