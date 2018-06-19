@@ -116,6 +116,7 @@
      <Compile Include="Assets\Scripts\WallBounce.cs" />
      <Compile Include="Assets\Scripts\WallBounceLeft.cs" />
      <Compile Include="Assets\UI\AnimationUI.cs" />
+     <Compile Include="Assets\UI\BeginingApp.cs" />
      <Compile Include="Assets\UI\Controls.cs" />
      <Compile Include="Assets\UI\HP.cs" />
      <Compile Include="Assets\UI\IngameMenu.cs" />
