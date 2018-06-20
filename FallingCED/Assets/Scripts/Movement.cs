@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour {
 	public bool menu;
 	public int points;
 	public bool fallen;
+	public bool martir;
+	public GameObject martirbomb;
 	private Vector2 touchOrigin = -Vector2.one;
 	// Use this for initialization
 	void Start () {
@@ -18,13 +20,24 @@ public class Movement : MonoBehaviour {
 		}
 	}
 
+	//BOMBAS 
+	IEnumerator Buff(){
+		yield return new WaitForSeconds (5);
+		martir = false;
+		yield return null;
+	}
+
 	void OnTriggerEnter(Collider box){
 		if (box.tag == "cubos"&&once) {
 			//FORCE
 			GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x,0,0);
-			Debug.Log (GetComponent<Rigidbody> ().velocity);
 			GetComponent<Rigidbody>().AddForce(new Vector3(0,20000,0));
 			points++;
+
+			if (martir==true) {
+				StartCoroutine (Buff ());
+				Instantiate (martirbomb, transform.position, Quaternion.identity);
+			}
 			once = false;
 		}
 	}

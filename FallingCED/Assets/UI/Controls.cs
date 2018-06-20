@@ -5,7 +5,7 @@ using UnityEngine;
 public class Controls : MonoBehaviour {
 	public GameObject swipeleft;
 	public GameObject swiperight;
-	bool sw=true;
+	public bool sw=true;
 	// Use this for initialization
 	public void ControlClicked(){
 		sw = !sw;

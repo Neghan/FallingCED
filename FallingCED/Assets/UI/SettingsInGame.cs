@@ -8,6 +8,8 @@ public class SettingsInGame : MonoBehaviour {
 	public GameObject KCamera;
 	public GameObject Mute;
 	public GameObject Controls;
+	public GameObject Controls1;
+	public GameObject Controls2;
 
 	bool sw = true;
 	public void Settings(){
@@ -22,6 +24,9 @@ public class SettingsInGame : MonoBehaviour {
 			KCamera.GetComponent<Image> ().color = new Color (KCamera.GetComponent<Image> ().color.r,KCamera.GetComponent<Image> ().color.g,KCamera.GetComponent<Image> ().color.b,0);
 			Mute.SetActive(false);
 			Controls.SetActive(false);
+			Controls1.SetActive (false);
+			Controls2.SetActive (false);
+			Controls.GetComponent<Controls> ().sw = true;
 		}
 
 	}

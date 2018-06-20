@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Up : MonoBehaviour {
-	bool start;
+	public bool start;
 	public float speed = 5;
 	public GameObject HP;
 

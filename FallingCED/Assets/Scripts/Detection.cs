@@ -16,6 +16,8 @@ public class Detection : MonoBehaviour {
 	public AudioClip three;
 	AudioSource sound;
 
+	GameObject rebotoma;
+
 	public GameObject redMesh;
 	public GameObject greenMesh;
 	public GameObject blueMesh;
@@ -40,7 +42,9 @@ public class Detection : MonoBehaviour {
 	void OnTriggerEnter(Collider ball){
 		if(ball.gameObject.CompareTag("pelota")&&canEnter){
 			if (!menu) {
+				if(mylife>0)
 				mylife--;
+				
 				canEnter = false;
 			}
 			//JUST FOR MENU
@@ -102,21 +106,21 @@ public class Detection : MonoBehaviour {
 		mylife = Random.Range (1, 10);
 		sound = GetComponent<AudioSource> ();
 		Type ();
+		//TYPE
+		if (wich == 0) {
+			//Instantiate(
+		} else if (wich == 1) {
+
+		} else if (wich == 2) {
+
+		}
 		startpos = transform.position;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		//TYPE
-		if (wich == 0) {
-			/*Vector3 actual = startpos;
-			actual.z += amount*Mathf.Sin (Time.deltaTime*movespeed);
-			transform.position = actual;*/
-		} else if (wich == 1) {
+		
 
-		} else if (wich == 2) {
-			
-		}
 
 		if (mylife <= 0 && !imDead) {
 			imDead = true;

@@ -7,7 +7,9 @@ public class Generator : MonoBehaviour {
 	GameObject []primero = new GameObject[4];  
 	//GameObject []segundo = new GameObject[4];  
 	public GameObject prefab;
-	public GameObject Dancing;
+	public GameObject Rebotoma;
+	public GameObject Mitosis;
+	public GameObject Martir;
 	public GameObject triggerer;
 	static Vector3 initPos = new Vector3(-3.0f,3.0f,-1.5f);
 
@@ -17,16 +19,24 @@ public class Generator : MonoBehaviour {
 
 	void generateLine(GameObject [] lineaParaLlenar,int length,int numeroLinea){
 		Vector3 pos = new Vector3 (initPos.x, initPos.y - 5 * numeroLinea, initPos.z);
-		for(int i = length - 1; i >= 0; i--){
-			lineaParaLlenar [i] = Instantiate (prefab,pos,Quaternion.identity);
-			pos = new Vector3 (pos.x + 2,pos.y,pos.z);
+		for (int i = length - 1; i >= 0; i--) {
+			lineaParaLlenar [i] = Instantiate (prefab, pos, Quaternion.identity);
+			pos = new Vector3 (pos.x + 2, pos.y, pos.z);
 		}
 		//Instantiate (triggerer,  pos, Quaternion.identity);
-		Vector3 pos1 = new Vector3 (initPos.x - 3,0.6f+initPos.y -5* numeroLinea, initPos.z);
-		Vector3 pos2 = new Vector3 (initPos.x + 9,0.6f+initPos.y -5* numeroLinea, initPos.z);
-		Instantiate (Dancing,pos1 , Quaternion.Euler(0,180,0));
+		Vector3 pos1 = new Vector3 (2+initPos.x,1.6f+initPos.y -5* numeroLinea, initPos.z);
+		Vector3 pos2 = new Vector3 (4+initPos.x,1.6f+initPos.y -5* numeroLinea, initPos.z);
+		Vector3 pos3 = new Vector3 (3+initPos.x,2.6f+initPos.y -5* numeroLinea, initPos.z);
+		if (Random.Range (1, 4) == 3) {
+			Instantiate (Rebotoma, pos1, Quaternion.Euler (0, 180, 0));
+		}
+		if (Random.Range (1, 4) == 1) {
+			Instantiate (Mitosis,pos2 , Quaternion.Euler(0,180,0));
+		}
+		if (Random.Range (1, 4) == 2) {
+			Instantiate (Martir,pos3 , Quaternion.Euler(0,180,0));
+		}
 
-		Instantiate (Dancing,pos2 , Quaternion.Euler(0,180,0));
 	}
 
 	// Use this for initialization
