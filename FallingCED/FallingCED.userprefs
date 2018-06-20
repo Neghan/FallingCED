@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Movement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\WallBounce.cs">
     <Files>
-      <File FileName="Assets\Scripts\WallBounceLeft.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Movement.cs" Line="56" Column="4" />
-      <File FileName="Assets\UI\BeginingApp.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Movement.cs" Line="26" Column="58" />
+      <File FileName="Assets\Scripts\WallBounce.cs" Line="9" Column="36" />
+      <File FileName="Assets\Scripts\WallBounceLeft.cs" Line="10" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

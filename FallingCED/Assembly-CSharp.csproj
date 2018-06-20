@@ -111,6 +111,7 @@
      <Compile Include="Assets\Scripts\MenuTextEffect.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\ScrollBackground.cs" />
+     <Compile Include="Assets\Scripts\TriggerC.cs" />
      <Compile Include="Assets\Scripts\Up.cs" />
      <Compile Include="Assets\Scripts\ValueSet.cs" />
      <Compile Include="Assets\Scripts\WallBounce.cs" />

@@ -74,11 +74,15 @@ public class Detection : MonoBehaviour {
 
 		}
 	}
+	IEnumerator LightsOut(){
+		yield return new WaitForSeconds (0.15f);
+		redlight.GetComponent<MeshRenderer> ().enabled = false;
+		greenlight.GetComponent<MeshRenderer> ().enabled = false;
+		bluelight.GetComponent<MeshRenderer> ().enabled = false;
+	}
 	void OnTriggerExit(Collider ball){
 		if (ball.gameObject.CompareTag ("pelota")&&!canEnter) {
-			redlight.GetComponent<MeshRenderer> ().enabled = false;
-			greenlight.GetComponent<MeshRenderer> ().enabled = false;
-			bluelight.GetComponent<MeshRenderer> ().enabled = false;
+			StartCoroutine (LightsOut ());
 			canEnter = true;
 		}
 	}

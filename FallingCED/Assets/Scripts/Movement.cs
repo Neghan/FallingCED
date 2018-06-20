@@ -21,8 +21,9 @@ public class Movement : MonoBehaviour {
 	void OnTriggerEnter(Collider box){
 		if (box.tag == "cubos"&&once) {
 			//FORCE
-			GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 0,0);
-			GetComponent<Rigidbody>().AddForce(new Vector3(0,400,0));
+			GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x,0,0);
+			Debug.Log (GetComponent<Rigidbody> ().velocity);
+			GetComponent<Rigidbody>().AddForce(new Vector3(0,20000,0));
 			points++;
 			once = false;
 		}
@@ -70,12 +71,12 @@ public class Movement : MonoBehaviour {
 			}
 
 			if (status == 1 && onetime) {
-				GetComponent<Rigidbody> ().velocity = new Vector3 (0, GetComponent<Rigidbody> ().velocity.y, GetComponent<Rigidbody> ().velocity.z);
-				GetComponent<Rigidbody> ().AddForce (new Vector3 (150, 0, 0));
+				GetComponent<Rigidbody> ().velocity = new Vector3 (GetComponent<Rigidbody> ().velocity.x, GetComponent<Rigidbody> ().velocity.y, GetComponent<Rigidbody> ().velocity.z);
+				GetComponent<Rigidbody> ().AddForce (new Vector3 (15000, 0, 0));
 				onetime = false;
 			} else if (status == 2 && onetime) {
-				GetComponent<Rigidbody> ().velocity = new Vector3 (0, GetComponent<Rigidbody> ().velocity.y, GetComponent<Rigidbody> ().velocity.z);
-				GetComponent<Rigidbody> ().AddForce (new Vector3 (-150, 0, 0));
+				GetComponent<Rigidbody> ().velocity = new Vector3 (GetComponent<Rigidbody> ().velocity.x, GetComponent<Rigidbody> ().velocity.y, GetComponent<Rigidbody> ().velocity.z);
+				GetComponent<Rigidbody> ().AddForce (new Vector3 (-15000, 0, 0));
 				onetime = false;
 			}
 		}
