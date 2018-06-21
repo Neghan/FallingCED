@@ -112,6 +112,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &10701907 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1961623580506142, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
+    type: 2}
+  m_PrefabInternal: {fileID: 406750461}
 --- !u!4 &41193184 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 87edd4fd4c16f1347a8e4b817c6ed2c4, type: 3}
@@ -287,49 +292,54 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224095179762181794, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 617.4773
-      objectReference: {fileID: 0}
-    - target: {fileID: 224010873199638602, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 627.9773
-      objectReference: {fileID: 0}
-    - target: {fileID: 224611738182561316, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 331.59998
-      objectReference: {fileID: 0}
-    - target: {fileID: 224611738182561316, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 613.2773
-      objectReference: {fileID: 0}
-    - target: {fileID: 224860771873635734, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 617.0773
-      objectReference: {fileID: 0}
-    - target: {fileID: 224027880079502394, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 636.2773
-      objectReference: {fileID: 0}
-    - target: {fileID: 114946431471356468, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 340448771}
     - target: {fileID: 114120421136383516, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 340448771}
+    - target: {fileID: 114946431471356468, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 340448771}
+    - target: {fileID: 224027880079502394, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 635.03186
+      objectReference: {fileID: 0}
+    - target: {fileID: 224860771873635734, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 615.83185
+      objectReference: {fileID: 0}
+    - target: {fileID: 224611738182561316, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 331.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224611738182561316, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 612.03186
+      objectReference: {fileID: 0}
+    - target: {fileID: 224010873199638602, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 626.7319
+      objectReference: {fileID: 0}
+    - target: {fileID: 224095179762181794, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 616.2319
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cfd0cacf914ab74fb53e90b1c8bb893, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &406750462 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1350715522737130, guid: 5cfd0cacf914ab74fb53e90b1c8bb893,
+    type: 2}
+  m_PrefabInternal: {fileID: 406750461}
 --- !u!1 &522910100
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,6 +963,7 @@ GameObject:
   - component: {fileID: 1903707513}
   - component: {fileID: 1903707514}
   - component: {fileID: 1903707515}
+  - component: {fileID: 1903707517}
   - component: {fileID: 1903707516}
   m_Layer: 0
   m_Name: Main Camera
@@ -1153,6 +1164,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1903707507}
   ball: {fileID: 340448771}
+--- !u!114 &1903707517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1903707507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d2d0bdd61feb0418d33f51acf0cd01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 406750462}
+  Resp: {fileID: 10701907}
 --- !u!1 &1938351477
 GameObject:
   m_ObjectHideFlags: 0

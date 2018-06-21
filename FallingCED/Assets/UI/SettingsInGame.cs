@@ -10,7 +10,7 @@ public class SettingsInGame : MonoBehaviour {
 	public GameObject Controls;
 	public GameObject Controls1;
 	public GameObject Controls2;
-
+	public GameObject BackToMen;
 	bool sw = true;
 	public void Settings(){
 		sw = !sw;
@@ -19,6 +19,7 @@ public class SettingsInGame : MonoBehaviour {
 			KCamera.GetComponent<Image> ().color = new Color (KCamera.GetComponent<Image> ().color.r,KCamera.GetComponent<Image> ().color.g,KCamera.GetComponent<Image> ().color.b,0.39f);
 			Mute.SetActive(true);
 			Controls.SetActive(true);
+			BackToMen.SetActive (true);
 		} else {
 			Time.timeScale = 1;
 			KCamera.GetComponent<Image> ().color = new Color (KCamera.GetComponent<Image> ().color.r,KCamera.GetComponent<Image> ().color.g,KCamera.GetComponent<Image> ().color.b,0);
@@ -26,6 +27,7 @@ public class SettingsInGame : MonoBehaviour {
 			Controls.SetActive(false);
 			Controls1.SetActive (false);
 			Controls2.SetActive (false);
+			BackToMen.SetActive (false);
 			Controls.GetComponent<Controls> ().sw = true;
 		}
 

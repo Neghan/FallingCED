@@ -1,6 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UI\Menu.cs">
+    <Files>
+      <File FileName="Assets\UI\SettingsInGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\UI\BeginingApp.cs" Line="1" Column="1" />
+      <File FileName="Assets\Shader\SurfaceOutline.shader" Line="1" Column="1" />
+      <File FileName="Assets\UI\Menu.cs" Line="42" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

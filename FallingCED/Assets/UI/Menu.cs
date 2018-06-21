@@ -11,6 +11,8 @@ public class Menu : MonoBehaviour {
 
 	public GameObject mute;
 	public GameObject controls;
+	public GameObject control1;
+	public GameObject control2;
 	public GameObject back;
 
 	public void Level(){
@@ -36,6 +38,9 @@ public class Menu : MonoBehaviour {
 		mute.SetActive (false);
 		controls.SetActive (false);
 		back.SetActive (false);
+
+		control1.SetActive (false);
+		control2.SetActive (false);
 
 		play.SetActive (true);
 		settings.SetActive (true);

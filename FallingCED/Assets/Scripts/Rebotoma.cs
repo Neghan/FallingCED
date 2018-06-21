@@ -5,7 +5,11 @@ using UnityEngine;
 public class Rebotoma : MonoBehaviour {
 	void OnTriggerEnter(Collider ball){
 		if (ball.tag == "pelota") {
-			//ball.gameObject.GetComponent<Rigidbody> ()
+			if (Random.Range (1, 2) == 1) {
+				ball.gameObject.GetComponent<Rigidbody> ().AddForce (15000, 0, 0);
+			} else{
+				ball.gameObject.GetComponent<Rigidbody> ().AddForce (-15000, 0, 0);
+			}
 			Destroy (gameObject);
 		}
 	}

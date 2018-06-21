@@ -19,18 +19,21 @@
 	struct v2f
 	{
 		float4 pos : POSITION;
+		float4 color : COLOR;
 		float3 normal: NORMAL;
 	};
 
 	float _OutlineWidth;
 	float4 _OutlineColor;
 
-	v2f vert(appdata v)
+	v2f vert(in appdata v)
 	{
+		
 		v.vertex.xyz *= _OutlineWidth;
 
-		v2f o;
+		v2f o=(v2f)0;
 		o.pos = UnityObjectToClipPos(v.vertex);
+		o.color = _OutlineColor;
 		return o;
 	}
 

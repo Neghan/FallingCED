@@ -22,6 +22,6 @@ public class BeginingApp : MonoBehaviour {
 		can.interactable = false;
 		Musc.GetComponent<AudioSource> ().clip = a;
 		Musc.GetComponent<AudioSource> ().PlayOneShot (a);
-		yield return null;
+
 	}
 }
